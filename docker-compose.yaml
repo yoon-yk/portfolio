@@ -32,7 +32,7 @@ services:
     depends_on:
       - mongo
       - redis 
-    ports:
+    ports: # 호스트:컨테이너 / 문자열로 지정해야 함 
       - "5000:3050"   
 
   # redis 
@@ -43,7 +43,7 @@ services:
       - ALLOW_EMPTY_PASSWORD=yes
     networks:
       - backend 
-    volumes:
+    volumes: # 호스트 쪽의 경로를 지정, 호스트:컨테이너
       - data:/data/redis   
     ports:
       - "6379:6379"
