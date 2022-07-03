@@ -30,14 +30,14 @@ services:
     networks:
       - backend  
     depends_on:
-      - portfolio_mongo
-      - portfolio_redis 
+      - pf_mongo
+      - pf_redis 
     ports: # 호스트:컨테이너 / 문자열로 지정해야 함 
       - "5000:3050"   
 
   # redis 
-  redis:
-    container_name: portfolio_redis
+  pf_redis:
+    container_name: pf_redis
     image: redis
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
@@ -50,8 +50,8 @@ services:
     restart: always    
 
   # mongo
-  mongo:
-    container_name: portfolio_mongo
+  pf_mongo:
+    container_name: pf_mongo
     image: mongo
     volumes:
       - data:/data/db
