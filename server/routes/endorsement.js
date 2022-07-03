@@ -3,7 +3,7 @@ var router = express.Router();
 
 var Endorsement = require('../models/endorsement');
 
-/* GET home page. */
+// Get 
 router.get('/', function(req, res, next) {
   return Endorsement
           .find({})
@@ -11,8 +11,10 @@ router.get('/', function(req, res, next) {
           .then((endorsements) => res.send(endorsements));
 });
 
+// Post
 router.post('/', function(req, res, next) {
-  const endorsement = Endorsement();
+  const endorsement = Endorsement(); // Create a document  
+
   const name = req.body.name;
   const title = req.body.title;
   const relationship = req.body.relationship;
@@ -26,7 +28,7 @@ router.post('/', function(req, res, next) {
   return endorsement
           .save()
           .then((endorsement) => res.send(endorsement))
-          .catch((error) => res.status(500).send({error}));
+          .catch((error) => res.status(500).send({error})); // error handling
 });
 
 module.exports = router;

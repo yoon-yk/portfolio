@@ -3,16 +3,17 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require('cors');
-var mongoose = require('mongoose');
 
-var db = mongoose.connection;
+var cors = require('cors'); // CORS 미들웨어 적용
+var mongoose = require('mongoose'); // require mongoose module
+
+var db = mongoose.connection; 
 db.on('error', console.error);
 db.once('open', function(){    
     console.log("Connected to mongod server");
 });
 
-mongoose.connect('mongodb://mongo/endorsement');
+mongoose.connect('mongodb://mongo/endorsement'); // connect to MongoDB
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -20,8 +21,7 @@ var endorsementRouter = require('./routes/endorsement');
 
 var app = express();
 
-//Cors 설정
-app.use(cors());
+app.use(cors()); // Enable All CORS Requests
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/endorsements', endorsementRouter);
+app.use('/endorsements', endorsementRouter); // endorsement 
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
