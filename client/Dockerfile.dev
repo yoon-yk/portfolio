@@ -1,5 +1,5 @@
 # 노드가 담긴 alpine 이미지 가져오기
-FROM node:10.15-alpine
+FROM node:14.1-alpine
 
 # 작업할 디렉토리 설정
 WORKDIR "/app"

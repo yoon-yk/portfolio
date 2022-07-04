@@ -4,7 +4,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import CollectionsIcon from '@material-ui/icons//Collections';
 import { about } from '../../portfolio'
 import './About.css'
-import { Divider, Button } from "@material-ui/core";
+import { Button } from "@material-ui/core";
 import { contact } from '../../portfolio'
 
 const About = () => {

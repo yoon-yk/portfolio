@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './Footer.css'
 
 
@@ -15,7 +15,7 @@ const Footer = () => (
     > Raj Shekhar
     </a>
     <br/>
-    Edited By Yeokyeong Yoon
+    Modified By Yeokyeong Yoon
     </small>
 
   </footer>
