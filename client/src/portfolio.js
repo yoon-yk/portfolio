@@ -9,7 +9,7 @@ const about = {
   name: 'Yeokyeong [여경] Yoon',
   role: 'passionate undergraduate student studying BA and CSE',
   description:
-    'Currently studying Business Administration and Computer Science/Engineering in Sogang Univeristy, Seoul, Korea. Expected to graduate in early Feburary, 2023. Interested in technology, food, photography, travelling and exercise.',
+    'Currently studying Business Administration and Computer Science/Engineering in Sogang Univeristy, Seoul, Korea. Expected to graduate in early Feburary, 2023. Interested in technology, food, photography and travelling.',
   resume: 'https://drive.google.com/file/d/1iy4J-frEyTXxoggpghdMixhn6GwLI7EJ/view?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/yeokyeongyoon/',
