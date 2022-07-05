@@ -1,81 +1,79 @@
 import axios from "axios";
 import Items from './Items';
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Grid from "@material-ui/core/Grid";
 import './Endorsement.css'
 import TextField from "@material-ui/core/TextField";
 import { Button } from "@material-ui/core";
 
-class Endorsement extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name : "",
-      title: "",
-      relationship : "",
-      content: "",
-      change: false
-    };
+const Endorsement = () => {
+  const [commenter, setName] = useState('');
+  const [commentTitle, setTitle] = useState('');
+  const [commentContent, setContent] = useState('');
 
-    this.handleChange = this.handleChange.bind(this);
-    this.sumbit = this.sumbit.bind(this);
-  }
-
-  handleChange(event) {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    console.log(name, value);
-
-    this.setState({
-      [name]: value
-    });
-  }
-
-  async sumbit(event){
+  const handleSubmit = async event => {
     event.preventDefault();
-    console.log(`${this.state.name},${this.state.title},${this.state.relationship},${this.state.content}`);
+
+    let body = {
+      name: commenter,
+      title: commentTitle,
+      content: commentContent
+    }
 
     await axios
-      .post("/api/endorsements", {
-        name: this.state.name,
-        title: this.state.title,
-        relationship: this.state.relationship,
-        content: this.state.content
-      })
+      .post("/api/endorsements", body)
       .then((result) => {
-        this.setState({
-          change : true
-        });
+
+          console.log('handleSubmit');
+          event.preventDefault(); // prevent page refresh
+      
+          // clear all input values in the form
+          setName('');
+          setTitle('');
+          setContent('');
+
       })
   }
 
-  render() {
     return (
       <div className='section'>
         <h2 className='section__title'>Endorsements</h2>
-        <Items class='endorsement__grid' change={this.state.change}/>
+        <Items class='endorsement__grid' />
         <div className = 'endorsement__form'>
-            <form method="post" action="">
+            <form method="post" action="" onSubmit={handleSubmit}>
                 <Grid container alignItems="center" justify="center" direction="column">
                 <h3>Give some kudos to Yoon</h3>
                     <Grid item>
-                        <TextField type="text" name="name" placeholder="Name" onChange={this.handleChange} />
+                        <TextField 
+                          type="text" 
+                          name="name"
+                          value={commenter}
+                          placeholder="Name" 
+                          onChange={event => setName(event.target.value)} />
                     </Grid>
                     <Grid item>
-                        <TextField type="text" name="title" placeholder="Job title" onChange={this.handleChange} />
+                        <TextField 
+                          type="text" 
+                          name="title"
+                          value={commentTitle}
+                          placeholder="Job title" 
+                          onChange={event => setTitle(event.target.value)} />
                     </Grid>
                     <Grid item>
-                        <TextField multiline fullWidth rows={4} name="content" placeholder="Comment" onChange={this.handleChange} />
+                        <TextField 
+                          multiline fullWidth 
+                          rows={4} 
+                          value={commentContent}
+                          name="content" 
+                          placeholder="Comment" 
+                          onChange={event => setContent(event.target.value)} />
                     </Grid>
-                        <Button onClick={this.sumbit}>Post</Button>
+                        <Button type="submit">Post</Button>
                 </Grid>
             </form>
         </div>
       </div>
     );
-  }
-}
+  };
 
 export default Endorsement;
