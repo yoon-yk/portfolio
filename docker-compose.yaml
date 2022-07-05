@@ -11,6 +11,8 @@ services:
       - /app/node_modules  
     networks:
       - backend    
+    environment:
+      - WDS_SOCKET_PORT=0
 
   # server        
   server:                          
@@ -25,19 +27,19 @@ services:
       - PORT=3050
       - DB_HOST=mongo
       - DB=test
-      - REDIS_HOST=pf_redis
+      - REDIS_HOST=redis
       - REDIS_PORT=6379      
     networks:
       - backend  
     depends_on:
-      - pf_mongo
-      - pf_redis 
+      - mongo
+      - redis 
     ports: # 호스트:컨테이너 / 문자열로 지정해야 함 
       - "5000:3050"   
 
   # redis 
-  pf_redis:
-    container_name: pf_redis
+  redis:
+    container_name: redis
     image: redis
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
@@ -50,8 +52,8 @@ services:
     restart: always    
 
   # mongo
-  pf_mongo:
-    container_name: pf_mongo
+  mongo:
+    container_name: mongo
     image: mongo
     volumes:
       - data:/data/db
