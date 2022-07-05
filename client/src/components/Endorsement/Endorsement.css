@@ -5,7 +5,12 @@
     box-shadow: var(--shadow);
     transition: transform 0.2s linear;
   }
-  
+
+.endorsement__description {
+    word-wrap: break-word;
+    overflow: auto;
+}
+
 .endorsement:hover {
     transform: translateY(-7px);
 }
