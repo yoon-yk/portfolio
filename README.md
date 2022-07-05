@@ -2,25 +2,13 @@ Portfolio
 ===================
 Last Update : Jul 6, 2022
 
-Implements a REST service that can be used to store and fetch endorsement data. 
+Created a simple portfolio with a REST API that can be used to store and fetch data. 
 
-An endorsement is a JSON
-hash like so:
-
-```json
-{
-  "regdate": {
-    "$date": {
-      "$numberLong": "1657025273538"
-    }
-  },
-  "name": "John",
-  "title": "Manager",
-  "content": "test",
-}
-```
-
-The spec for the REST service is defined below.
+## Technology Stack
+1. Client : React
+2. API Server : Node Express
+3. Database : Mongo
+4. Server : Nginx
 
 
 ## Pre-requisite
@@ -37,7 +25,24 @@ cd portfolio
 docker-compose up --build
 ```
 
-## API SPEC
+## API
+
+An endorsement is a JSON
+hash like so:
+
+```json
+{
+  "regdate": {
+    "$date": {
+      "$numberLong": "1657025273538"
+    }
+  },
+  "name": "John",
+  "title": "Manager",
+  "content": "test",
+}
+```
+### API Stack
 
 ```
 GET /endorsements
