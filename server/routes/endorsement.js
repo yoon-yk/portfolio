@@ -8,7 +8,8 @@ router.get('/', function(req, res, next) {
   return Endorsement
           .find({})
           .sort({regdate: -1}) // Sort descending
-          .then((endorsements) => res.send(endorsements));
+          .then((endorsements) => res.status(201).send(endorsements))
+          .catch((error) => res.status(404).send({error})); // error handling
 });
 
 // Post
@@ -27,7 +28,7 @@ router.post('/', function(req, res, next) {
 
   return endorsement
           .save()
-          .then((endorsement) => res.send(endorsement))
+          .then((endorsement) => res.status(201).send(endorsement))
           .catch((error) => res.status(500).send({error})); // error handling
 });
 
