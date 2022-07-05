@@ -7,7 +7,7 @@ var Endorsement = require('../models/endorsement');
 router.get('/', function(req, res, next) {
   return Endorsement
           .find({})
-          .sort({regdate: -1})
+          .sort({regdate: -1}) // Sort descending
           .then((endorsements) => res.send(endorsements));
 });
 
