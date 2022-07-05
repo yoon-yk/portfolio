@@ -35,7 +35,7 @@ const projects = [
       'Reduced image triggering error by greater than 99%, recovering 10% of overall image layout coverage losses'
     ],
     stack: ['C++', 'Java', 'Linux'],
-    livePreview : 'https://www.linkedin.com/in/yeokyeongyoon/overlay/experience/1791641796/multiple-media-viewer/?treasuryMediaId=1635494643175'
+    livePreview : 'https://drive.google.com/drive/folders/1mRh7A1UvLBOKUvP6B0oFa0yZZfYhdocN?usp=sharing'
   },
   {
     name: 'World PPP Infrastructure Failure Map',
@@ -52,7 +52,7 @@ const projects = [
       ],
     stack: ['PUG', 'SASS', 'JavaScript', 'React', 'MongoDB', 'Git'],
     sourceCode: 'https://github.com/sdp-tech/Visualization',
-    livePreview : 'https://www.linkedin.com/in/yeokyeongyoon/overlay/experience/1720992581/multiple-media-viewer/?treasuryMediaId=1635467443643'
+    livePreview : 'https://drive.google.com/drive/folders/19mxj4iGhi74ydYPU3glHw7Y44YpMRciW?usp=sharing'
   },
   {
     name: 'Blog Posts Crawler',
