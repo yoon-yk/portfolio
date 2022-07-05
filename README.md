@@ -54,3 +54,6 @@ POST /endorsements
     Creates a new endorsement record. The body of the request should be a valid user
     record. Successful POSTs will return a 201. Otherwise, it returns 500. 
 ```
+
+### Preview
+![preview](https://github.com/yoon-yk/portfolio/blob/main/portfolio.png?raw=true)
