@@ -1,0 +1,41 @@
+.endorsement {
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+  }
+
+.endorsement__description {
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.endorsement:hover {
+    transform: translateY(-7px);
+}
+
+.endorsement__content {
+    margin-top: 1em;
+}
+
+.endorsement__form {
+    margin : 1em;
+    padding: 2em;
+}
+
+.endorsement__grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap: 2em;
+}
+
+form {
+	padding:30px;
+	height:auto;
+	overflow:hidden;
+    background-color:rgba(255, 255, 255, 0.5);
+	border-radius:5px;
+}
