@@ -22,7 +22,7 @@ const Endorsement = () => {
 
     await axios
       .post("/api/endorsements", body)
-      .then((result) => {
+      .then(() => {
 
           console.log('handleSubmit');
           event.preventDefault(); // prevent page refresh
