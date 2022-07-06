@@ -29,10 +29,11 @@ const projects = [
     endingYear : 2021,
     endingMonth : 9,
     description:
-      ['Responsible for maintenance and support of Top Content Panel Web Answer Project, one of the new Desktop optimized Search features launched in December 2021.',
-      'Diagnosed and documented issues causing a search result loss, and framed the possible solutions discussing with senior engineers, UX engineers, and project managers.',
-      'Designed, developed, and tested the newly optimized image layout algorithm.',
-      'Reduced image triggering error by greater than 99%, recovering 10% of overall image layout coverage losses'
+      [
+        'Assigned to maintenance and support of Top Content Panel Web Answer Project, one of Google\'s new Desktop optimized Search features launched in December 2021',
+        'Diagnosed and documented issues causing a search result loss, and framed the possible solutions in constant discussion with senior engineers, UX engineers, and project managers',
+        'Designed, developed, and tested the newly optimized image layout algorithm',
+        'Reduced image triggering error by greater than 99%, recovering 10% of overall image layout coverage losses'
     ],
     stack: ['C++', 'Java', 'Linux'],
     livePreview : 'https://drive.google.com/drive/folders/1mRh7A1UvLBOKUvP6B0oFa0yZZfYhdocN?usp=sharing'
@@ -45,10 +46,11 @@ const projects = [
     endingYear : 2021,
     endingMonth : 7,
     description:
-      ['Worked mainly as a Frontend developer for creating and an interactive map to visualize delayed or canceled PPP infrastructure deals.',
-      'Developed and designed user-interactive web map, adding dynamic filters using jQuery and Leaflet Library.',
-      'Experienced in handling GeoJSON format data and migration of data among multiple databases using MongoDB.',
-      'Collaborated closely with Research Team by and Backend developer to deliver up-to-date PPP deals and contents on the webpage.'
+      [
+        'Worked mainly as a Frontend developer for creating and an interactive map to visualize delayed or canceled PPP infrastructure deals',
+        'Developed and designed user-interactive web map and data dashboard, adding dynamic filtering function using React and Leaflet Library',
+        'Experienced in handling with GeoJSON format data using MongoDB CRUD Operations',
+        'Collaborated closely with Research Team and Backend developer to keep PPP deals and contents on the website up-to-date'
       ],
     stack: ['PUG', 'SASS', 'JavaScript', 'React', 'MongoDB', 'Git'],
     sourceCode: 'https://github.com/sdp-tech/Visualization',
@@ -62,8 +64,8 @@ const projects = [
     endingYear : 2020,
     endingMonth : 7,
     description:
-      ['Developed a web crawler to collect reviewing posts on the blogs as training data',
-      'Designed the crawler to automatically search target words in the search engine and open resulted URLs in queue order to crawl HTML/XML contents, then store crawled data into CSV format'
+      ['Developed a web crawler to collect blog review posts as training data',
+      'Designed a crawler to automatically search target words in the search engine and open resulted URLs in queue order to crawl HTML/XML contents, then store crawled data into CSV format'
     ],
     stack: ['Python'],
     sourceCode: 'https://github.com/yoon-yk/ai-jam_naverblogCrawl',
