@@ -10,7 +10,7 @@ const about = {
   role: 'passionate undergraduate student studying BA and CSE',
   description:
     'Currently studying Business Administration and Computer Science/Engineering in Sogang Univeristy, Seoul, Korea. Expected to graduate in early Feburary, 2023. Interested in technology, food, photography and travelling.',
-  resume: 'https://drive.google.com/file/d/1iy4J-frEyTXxoggpghdMixhn6GwLI7EJ/view?usp=sharing',
+  resume: 'https://drive.google.com/file/d/1Hf5c7mHOvdFcNUmvjqoTEo12-qV3qL3N/view?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/yeokyeongyoon/',
     github: 'https://github.com/yoon-yk',
